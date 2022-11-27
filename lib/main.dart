@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//Building UI using Future
+//Building UI using FutureBuilder
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Json Cache_Path Provider'),
+        title: const Text('Json Cache_Path Provider'),
         centerTitle: true,
       ),
       body: FutureBuilder(
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: ((context, snapshot) {
           final data = snapshot
               .data; //Getting data from snapshot of getData which is indirectly from Models
-          print("snapshot data : $data");
+         // print("snapshot data : $data");
           if (!snapshot.hasData) {
             return const Center(
               child: CircularProgressIndicator(),

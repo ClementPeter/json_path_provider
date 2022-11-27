@@ -10,19 +10,19 @@ class ApiProvider {
     String fileName = "PathString.json";
     var dir =
         await getTemporaryDirectory(); //Get temp directory for caching in dir
-    print("Temp dir name : $dir");
+    //print("Temp dir name : $dir");
 
     File file = File("${dir.path}/$fileName"); //assign the dir path as a file
 
     //check if the cached files exists
     if (file.existsSync()) {
-      print("Reading from device cache");
+      //print("Reading from device cache");
       final data = file.readAsStringSync();
       final comment = commentFromJson(data);
       return comment;
     } else {
       //else- get API for network
-      print("Fetching from Network");
+      //print("Fetching from Network");
       final response = await http.get(Uri.parse(url));
 
       //HTTP Error Check

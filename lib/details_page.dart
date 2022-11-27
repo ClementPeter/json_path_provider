@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
-  DetailsPage({required this.data, super.key});
+  const DetailsPage({required this.data, super.key});
 
-  String data;
+  final String data;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Comment Details"),
+        title: const Text("Comment Details"),
         centerTitle: true,
       ),
       body: Center(
