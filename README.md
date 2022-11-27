@@ -1,6 +1,6 @@
 # json_path_provider
 
-A new Flutter project.
+A new Flutter project on how to use path provider to cache data 
 
 ## Getting Started
 

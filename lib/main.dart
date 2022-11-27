@@ -37,31 +37,43 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Json Cache_Path Provider'),
+        centerTitle: true,
       ),
       body: FutureBuilder(
         future: ApiProvider().getData(),
         builder: ((context, snapshot) {
+          final data = snapshot
+              .data; //Getting data from snapshot of getData which is indirectly from Models
+          print("snapshot data : $data");
           if (!snapshot.hasData) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else {
             return ListView.builder(
-              itemCount: 10,
+              itemCount: data!.length,
               itemBuilder: ((context, index) {
-                return ListTile(
-                  title: Text("iowf"),
-                  subtitle: Text(""),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) {
-                          return DetailsPage();
-                        },
-                      ),
-                    );
-                  },
+                final comment = data[index];
+                final initial = comment.id;
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      child: Text(initial.toString()),
+                    ),
+                    title: Text(comment.name!),
+                    subtitle: Text(comment.email!),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) {
+                            return DetailsPage(data: comment.body!);
+                          },
+                        ),
+                      );
+                    },
+                  ),
                 );
               }),
             );
