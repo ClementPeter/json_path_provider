@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'dart:io';
-
 import 'package:http/http.dart' as http;
 import 'package:json_path_provider/comment_models.dart';
 import 'package:path_provider/path_provider.dart';
@@ -14,7 +12,7 @@ class ApiProvider {
         await getTemporaryDirectory(); //Get temp directory for caching in dir
     print("Temp dir name : $dir");
 
-    File file = File(dir.path + "/" + fileName); //assign the dir path as a file
+    File file = File("${dir.path}/$fileName"); //assign the dir path as a file
 
     //check if the cached files exists
     if (file.existsSync()) {
