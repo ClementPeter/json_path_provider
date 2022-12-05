@@ -22,18 +22,20 @@ samples, guidance on mobile development, and a full API reference.
 Demo APP store data JSON data to device cache using Path Provider
 
 
-
 ### Features Implemented
 
 > Store json data into device cache using path provider
 
-> Access Json data from Cahc when device is offline
+> Access Json data from Cahce when device is offline
 
 > Well commented and Explained Codebase
 
 
 
-## 📸 Screen shots
+## 📸 Screen shots  
+![Screenshot_20221205-092340](https://user-images.githubusercontent.com/61213263/205589456-5c28e8b4-8a9e-4bc8-bb30-4e5eb2399297.png)
+
+
 
 
 ### Resources Used
