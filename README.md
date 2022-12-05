@@ -25,21 +25,16 @@ Demo APP store data JSON data to device cache using Path Provider
 
 ### Features Implemented
 
-> Store json files into device cache using path provider
+> Store json data into device cache using path provider
+
+> Access Json data from Cahc when device is offline
 
 > Well commented and Explained Codebase
 
 
 
 ## 📸 Screen shots
-![Screenshot_20221123-114448](https://user-images.githubusercontent.com/61213263/203532556-d5753131-e9d2-4b80-b0c3-e48cd13b456d.png)
 
-
-
-![Screenshot_20221123-104656](https://user-images.githubusercontent.com/61213263/203532555-9b474fbd-a58a-49df-8ca5-1c5a0664d230.png)
-
-
-![Screenshot_20221123-114441](https://user-images.githubusercontent.com/61213263/203532554-cdcc6662-ca66-4b96-b45d-b7438548d242.png)
 
 ### Resources Used
 
